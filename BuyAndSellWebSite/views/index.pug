@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //Check for any articles being passed in from the server
+  if (ads && ads.length)
+    table
+        thead
+            th Name
+            th Description
+            th Price
+           
+        tbody
+            //If there is articles, create a row and column for each article
+            each ad in ads
+                tr
+                    td= ad.name
+                    td= ad.description
+                    td= ad.price
+                   
+  else
+    h1 No ad!
+    include partials/footer.pug
