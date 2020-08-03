@@ -7,6 +7,22 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Setting the connection between the application and mongoDB.
+const MongoClient = require('mongodb').MongoClient;
+var mongoose = require('mongoose');
+const uri = "mongodb+srv://GurinderSingh1:Gurinder@123@cluster0-jmv4s.mongodb.net/<dbname>?retryWrites=true&w=majority";
+try {
+    mongoose.connect(uri, { useNewUrlParser: true });
+    var db = mongoose.connection;
+    db.on('error', function (err) {
+        console.log(err);
+    });
+    db.once('open', function (callback) {
+        console.log('Connected to MongoDB');
+    });
+} catch (err) {
+    console.log("Error : " + err);
+}
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
