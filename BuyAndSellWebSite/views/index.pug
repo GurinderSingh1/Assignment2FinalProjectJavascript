@@ -7,7 +7,7 @@ block content
         thead
             th Name
             th Description
-            th Image
+            th Price 
             th Update
             th Delete
         tbody
@@ -16,8 +16,7 @@ block content
                 tr
                     td= ad.name
                     td= ad.description
-                    td
-                        img(src='/images/'+ad.image)
+                    td= ad.Price
                     td 
                         a(href='/update/'+ad.id) Update
                     td

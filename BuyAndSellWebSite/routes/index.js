@@ -30,7 +30,7 @@ router.get('/insert', function (req, res) {
     res.render('insert');
 });
 
-/* GET insert page. */
+/* GET update page. */
 router.get('/update', function (req, res) {
     res.render('update');
 });
@@ -45,7 +45,7 @@ router.post('/insert', function (req, res) {
         //Update filename
         files.image.name = fields.name + '.' + files.image.name.split('.')[1];
         //Create a new article using the Articles Model Schema
-        const ad = new adsModel({ name: fields.name, description: fields.description, image: files.image.name, price: fields.price });
+        const ad = new adsModel({ name: fields.name, description: fields.description, price: fields.price });
         //Insert article into DB
         ad.save(function (err) {
             console.log(err);

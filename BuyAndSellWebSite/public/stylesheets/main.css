@@ -16,15 +16,6 @@ fieldset {
     width: 300px;
     margin-top: 10px ;
 }
-
-input[submit] {
-    height: 20px;
-    width: 40px;
-    background-color: aqua;
-    text-align: center;
-    margin-left: 49%;
-}
-
 a {
     color: #00B7FF;
 }

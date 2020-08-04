@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 //Create Schema
 const adsSchema = new mongoose.Schema({
@@ -16,8 +17,6 @@ const adsSchema = new mongoose.Schema({
         required: true,
         trim: true
     }
-    
-
 });
 //Create and instantiate model with schema
 const Ads = mongoose.model("Ads", adsSchema);
