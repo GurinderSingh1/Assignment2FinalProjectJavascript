@@ -1,6 +1,28 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: azure;
+
+}
+h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    font-color: #7F3A2C;
+}
+
+fieldset {
+    padding-top: 30px;
+    height: 100px;
+    width: 300px;
+    margin-top: 10px ;
+}
+
+input[submit] {
+    height: 20px;
+    width: 40px;
+    background-color: aqua;
+    text-align: center;
+    margin-left: 49%;
 }
 
 a {

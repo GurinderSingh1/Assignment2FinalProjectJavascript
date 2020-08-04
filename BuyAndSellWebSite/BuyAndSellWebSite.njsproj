@@ -33,7 +33,13 @@
     <Content Include="models\ads.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="models\user.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\images\table.jpg" />
+    <Content Include="public\stylesheets\Login.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\index.js" />
     <Content Include="routes\users.js" />
     <Content Include="package.json" />

@@ -15,12 +15,10 @@ const adsSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
-    },
-    image: {
-        type: String
     }
+    
 
 });
 //Create and instantiate model with schema
-const ads = mongoose.model("Ads", adsSchema);
-module.exports = ads;
+const Ads = mongoose.model("Ads", adsSchema);
+module.exports = Ads;

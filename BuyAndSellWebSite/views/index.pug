@@ -1,22 +1,27 @@
 extends layout
 
 block content
-  //Check for any articles being passed in from the server
+  //Check for any ads being passed in from the server
   if (ads && ads.length)
     table
         thead
             th Name
             th Description
-            th Price
-           
+            th Image
+            th Update
+            th Delete
         tbody
-            //If there is articles, create a row and column for each article
+            //If there is ads, create a row and column for each ad
             each ad in ads
                 tr
                     td= ad.name
                     td= ad.description
-                    td= ad.price
-                   
+                    td
+                        img(src='/images/'+ad.image)
+                    td 
+                        a(href='/update/'+ad.id) Update
+                    td
+                        form(method="POST" action= "/delete/"+ad.id)
+                            button(type="submit") Delete
   else
-    h1 No ad!
-    include partials/footer.pug
+    h1 No ads!
